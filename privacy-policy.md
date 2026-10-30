@@ -70,10 +70,11 @@ We do not collect contacts, photos from your library, health data, financial inf
 - when you turn off Share my location (this deletes your location for every incident);
 - when the app goes to the background or closes, or you switch to a different incident (the app asks our server to delete your location for that incident);
 - when the incident is closed, the next time the app sends or loads crew positions for that incident;
-- when you leave the team, the OIC removes you from the team, or the OIC deletes your crew account; and
+- when you leave the team, the OIC removes you from the team, or the OIC deletes your crew account;
+- automatically, once it has not been updated for 12 hours or once its incident is closed (our server checks for these about every 10 minutes while anyone is using the app, so they are deleted within about 12 hours); and
 - when you delete your account. When an OIC deletes their account, their incidents and the data linked to them, including every crew location on their incidents, are deleted too.
 
-There is no scheduled or automatic clean up job, so a location record is only deleted by one of the steps above. We do not keep a location history or trail.
+We do not keep a location history or trail.
 
 ## 5. Why we collect it and how we use it (APP 3 and APP 6)
 
