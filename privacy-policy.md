@@ -7,7 +7,7 @@ FireCom is a mobile app for fire and emergency crews, developed by Luke Swain in
 ## 1. Summary
 
 - We collect only what the app needs to work: your account, your incidents, fire maps, notes and messages, a push notification token and, for crew who allow it, their location during an active incident.
-- Location is used only while the app is open. FireCom asks for "While Using the App" (When In Use) permission only. It never asks for "Always" permission and never collects location in the background.
+- Location is used only while the app is open in the foreground. FireCom asks for "While Using the App" (When In Use) permission only. It never asks for "Always" or background location permission and never collects location in the background.
 - Crew locations are visible only to the officer in charge (OIC) and crew of the incident, only while that incident is active, and crew can switch sharing off at any time.
 - We do not sell your information, we do not use it for advertising, and we do not track you across other companies' apps or websites. FireCom contains no advertising, analytics or crash reporting tools.
 - You can delete your account and its data inside the app at any time.
@@ -41,7 +41,7 @@ There are two kinds of users:
 
 **Location (see section 4)**
 - Your device's coordinates and heading, used on the device for the compass, weather and your own position on the fire map.
-- For crew who leave Share my location on: coordinates, heading, name, role and time of the last update, stored while the fire map of an active incident is open.
+- If Share my location is on: coordinates, heading, name, role and time of the last update, for the active incident whose fire map you opened last. We keep one record per account per incident, and each update overwrites it.
 
 **Data stored only on your device**
 - The app keeps a local copy of your fire maps and some settings on your phone so it works with poor reception. This is removed when you delete your account or remove the app.
@@ -58,21 +58,20 @@ We do not collect contacts, photos from your library, health data, financial inf
 - Crew vehicle positions on the fire map, described below.
 
 **Crew location sharing.**
-- Only crew share their location. OIC location is not sent to other users.
-- A crew member's location is sent only while the app is open and on screen, with the fire map of an active incident open. Updates are sent about every 20 seconds or when the device moves about 25 metres.
-- It stops immediately when the app goes to the background, when the fire map is closed, or when the incident is closed, and the crew member's position is removed from the map.
+- Your location is shared only when the Share my location switch is on.
+- It is shared only while FireCom is open in the foreground. This can be on any screen in the app, not just the fire map. It is shared for the active incident whose fire map you opened last. Updates are sent about every 20 seconds or when the device moves about 25 metres.
+- It stops straight away when the app goes to the background or closes, when you turn the switch off, or when the incident is no longer active, and your position is removed from the map.
 - Crew locations can be seen only by the OIC who owns the incident and the crew on that OIC's team who can open the incident. They are not public and are not shown to anyone else. Anyone removed from the team stops seeing locations and their own location is removed.
 - Locations are read and written only through our server function, which checks these rules on every request. There is no direct access to the location records from the app.
 
-**Opting out.** Crew can turn off "Share my location" in their profile at any time. When it is off, the app stops sending location, every stored location for that crew member is deleted, and the server refuses any further location from that account, even from an older version of the app. You can also remove FireCom's location permission at any time in your device settings (iOS: Settings > Privacy & Security > Location Services > FireCom).
+**Opting out.** You can turn off "Share my location" in the fire map settings at any time. When it is off, the app stops sending location, your stored location is deleted, and the server refuses any further location from that account, even from an older version of the app. You can also remove FireCom's location permission at any time in your device settings (iOS: Settings > Privacy & Security > Location Services > FireCom).
 
-**How long location is kept.** Stored crew locations are short lived. They are deleted:
-- when the crew member turns off Share my location, leaves the fire map or puts the app in the background;
-- when the incident is closed;
-- when the crew member leaves or is removed from the team, or deletes their account; and
-- by an automatic nightly clean up, which removes any location belonging to a closed incident or not updated in the last 12 hours.
+**How long location is kept.** We store one location record per account per incident. Each update overwrites it, so only your latest position is kept. It is deleted:
+- when you turn off Share my location, or when the app goes to the background or closes;
+- when the incident is deleted; and
+- when your account is deleted. When an OIC deletes their account, their incidents and the data linked to them, including crew locations, are deleted too.
 
-We do not keep a location history or trail.
+There is no scheduled or automatic clean up job. We do not keep a location history or trail.
 
 ## 5. Why we collect it and how we use it (APP 3 and APP 6)
 
@@ -126,7 +125,7 @@ We protect your information with encrypted connections, per user access permissi
 
 - Account, incidents, fire maps, notes, snapshots and messages: while your account exists, until you or the OIC delete them.
 - Earlier versions of fire maps: removed automatically after 30 days.
-- Crew locations: see section 4 (at most 12 hours, and usually removed straight away).
+- Crew locations: see section 4. Only the latest position is kept, and it is usually removed as soon as the app leaves the foreground.
 - Push tokens: replaced or removed when they stop being valid, when you sign out, or when your account is deleted.
 - When an account is deleted, its data is removed from our database straight away. Backups held by our hosting provider may take up to 30 days to expire.
 
