@@ -66,12 +66,14 @@ We do not collect contacts, photos from your library, health data, financial inf
 
 **Opting out.** You can turn off "Share my location" in the fire map settings at any time. When it is off, the app stops sending location, your stored location is deleted, and the server refuses any further location from that account, even from an older version of the app. You can also remove FireCom's location permission at any time in your device settings (iOS: Settings > Privacy & Security > Location Services > FireCom).
 
-**How long location is kept.** We store one location record per account per incident. Each update overwrites it, so only your latest position is kept. It is deleted:
-- when you turn off Share my location, or when the app goes to the background or closes;
-- when the incident is deleted; and
-- when your account is deleted. When an OIC deletes their account, their incidents and the data linked to them, including crew locations, are deleted too.
+**How long location is kept.** We store one location record per account per incident. Each update overwrites it, so only your latest position is kept. Positions that have not been updated for 12 hours are no longer shown on the map. Your location record is deleted:
+- when you turn off Share my location (this deletes your location for every incident);
+- when the app goes to the background or closes, or you switch to a different incident (the app asks our server to delete your location for that incident);
+- when the incident is closed, the next time the app sends or loads crew positions for that incident;
+- when you leave the team, the OIC removes you from the team, or the OIC deletes your crew account; and
+- when you delete your account. When an OIC deletes their account, their incidents and the data linked to them, including every crew location on their incidents, are deleted too.
 
-There is no scheduled or automatic clean up job. We do not keep a location history or trail.
+There is no scheduled or automatic clean up job, so a location record is only deleted by one of the steps above. We do not keep a location history or trail.
 
 ## 5. Why we collect it and how we use it (APP 3 and APP 6)
 
@@ -124,8 +126,8 @@ We protect your information with encrypted connections, per user access permissi
 ## 10. How long we keep information
 
 - Account, incidents, fire maps, notes, snapshots and messages: while your account exists, until you or the OIC delete them.
-- Earlier versions of fire maps: removed automatically after 30 days.
-- Crew locations: see section 4. Only the latest position is kept, and it is usually removed as soon as the app leaves the foreground.
+- Earlier versions of fire maps: kept until the OIC who owns the incident deletes their account. They are not removed automatically.
+- Crew locations: see section 4. Only the latest position is kept, and it is usually deleted as soon as the app leaves the foreground.
 - Push tokens: replaced or removed when they stop being valid, when you sign out, or when your account is deleted.
 - When an account is deleted, its data is removed from our database straight away. Backups held by our hosting provider may take up to 30 days to expire.
 
