@@ -7,8 +7,8 @@ FireCom is a mobile app for fire and emergency crews, developed by Luke Swain in
 ## 1. Summary
 
 - We collect only what the app needs to work: your account, your incidents, fire maps, notes and messages, a push notification token and, for crew who allow it, their location during an active incident.
-- Location is used only while the app is open. FireCom asks for "While Using the App" (When In Use) permission only. It never asks for "Always" permission and never collects location in the background.
-- Crew locations are shared only while the crew member has Share my location turned on. They are visible only to members of that crew member's own team for the incident, and crew can switch sharing off at any time, which removes their location straight away.
+- Location is collected in the background only for crew who are on an active incident with Share my location on, and only if they choose to allow "Always" permission. Outside an active incident FireCom never tracks your location. Always permission is optional and the app works with "While Using the App" only.
+- Crew locations are shared only while the crew member has Share my location turned on, and only on the incident that crew member has set as their active incident. They are visible only to members of that crew member's own team for that incident, and crew can switch sharing off at any time, which removes their location straight away.
 - We do not sell your information, we do not use it for advertising, and we do not track you across other companies' apps or websites. FireCom contains no advertising, analytics or crash reporting tools.
 - You can delete your account and its data inside the app at any time.
 
@@ -41,7 +41,7 @@ There are two kinds of users:
 
 **Location (see section 4)**
 - Your device's coordinates and heading, used on the device for the compass, weather and your own position on the fire map.
-- For crew who leave Share my location on: coordinates, heading, name, role and the time of the last update, sent while FireCom is open during an active incident.
+- For crew who leave Share my location on: coordinates, heading, name, role and the time of the last update, sent only during their active incident (in the background as well if they allow Always permission).
 
 **Data stored only on your device**
 - The app keeps a local copy of your fire maps and some settings on your phone so it works with poor reception. This is removed when you delete your account or remove the app.
@@ -50,7 +50,9 @@ We do not collect contacts, photos from your library, health data, financial inf
 
 ## 4. Location
 
-**Permission.** FireCom asks for location permission "While Using the App" only (iOS When In Use; on Android, foreground location only). It never requests "Always" or background location, and it does not collect location when the app is closed or in the background. Location is optional: if you deny it, everything else in the app still works.
+**Permission.** FireCom first asks for location permission "While Using the App" (iOS When In Use; on Android, foreground location). Only crew who are on an active incident with Share my location on are then asked, after a short explanation, whether to also allow "Always" (iOS) or "Allow all the time" (Android). FireCom never asks OICs or anyone outside an active incident for Always permission. Location is optional: if you deny it, everything else in the app still works, and if you deny Always, sharing simply works while the app is open.
+
+**Why background location.** On the fireground, phones are usually locked in a pocket or left in a truck. The OIC still needs to see where each crew member is for their safety, for example to move people out of the way of a fire run or find the nearest crew to a spot fire. Background location lets that keep working without the crew member having to keep FireCom open on screen.
 
 **What it is used for.**
 - Compass heading and your own position on the fire map. This stays on your device.
@@ -59,8 +61,10 @@ We do not collect contacts, photos from your library, health data, financial inf
 
 **Crew location sharing.**
 - Only crew share their location. OIC location is not sent to other users.
-- A crew member's location is shared only while their Share my location switch is on. It is sent only while FireCom is open on screen during an active incident, about every 20 seconds or when the device moves about 25 metres.
-- When the app is closed or put in the background, updates stop but the last position is not deleted. Teammates see that last known position with an offline marker and the time the crew member was last located, so the OIC knows where a crew member was last seen.
+- A crew member's location is shared only while their Share my location switch is on and only during an active incident, about every 20 seconds or when the device moves about 25 metres. If they allowed Always permission it keeps being sent while the phone is locked or FireCom is in the background. iOS shows the location indicator and Android shows a persistent notification ("FireCom is sharing your location with your OIC") whenever this is happening.
+- A crew member's location is only ever shown on the map of the incident they have set as their active incident (the incident they last opened). Each update is tagged with that incident, and it is never shown on any other incident.
+- Background location stops automatically when the incident ends or is closed, when the crew member switches sharing off, leaves the incident or team, logs out, or deletes their account. Outside an active incident FireCom never tracks location, in the foreground or background.
+- If the crew member did not allow Always permission and puts the app in the background or closes it, updates stop but the last position is not deleted. Teammates see that last known position with an offline marker and the time the crew member was last located, so the OIC knows where a crew member was last seen.
 - Crew locations can be seen only by members of the crew member's own team for that incident, meaning the OIC who owns the incident and the crew on that OIC's team. They are not public and are not shown to anyone else. Anyone removed from the team stops seeing locations and their own location is removed.
 - Locations are read and written only through our server function, which checks these rules on every request. There is no direct access to the location records from the app.
 
@@ -139,7 +143,7 @@ Deletion cannot be undone. Data stored only on your phone is cleared when you de
 ## 12. Withdrawing consent
 
 You can withdraw consent at any time:
-- Location: turn off Share my location (crew) and/or remove location permission in your device settings.
+- Location: turn off Share my location (crew) and/or remove location permission, or change it from Always to While Using the App, in your device settings.
 - Notifications: turn notifications off in your device settings.
 - Everything else: delete your account as described in section 11, or contact us.
 
