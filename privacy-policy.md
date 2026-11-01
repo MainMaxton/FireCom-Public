@@ -10,6 +10,7 @@ FireCom is a mobile app for fire and emergency crews, developed by Luke Swain in
 - Linked crew devices are work devices for fire trucks, set up by the officer in charge (OIC). A truck device shares its location, including in the background, only while the OIC has it assigned to an open incident. Nothing is tracked outside that.
 - Everything you add to an incident can be seen only by the OIC who owns it and the OIC's own team.
 - We do not sell your information, we do not use it for advertising, and we do not track you across other companies' apps or websites. FireCom contains no advertising, analytics or crash reporting tools.
+- Note photos are deleted automatically 28 days after their incident is closed. Truck locations are never kept more than 6 hours.
 - You can delete your account and its data inside the app at any time.
 
 ## 2. Who uses FireCom
@@ -28,7 +29,7 @@ FireCom is meant for use by fire and emergency crews as part of their work. It i
 
 **Incident data and content you create**
 - Incident names and numbers, whether an incident is open or closed, response mode, briefings and incident notes. Notes record the name of the person or device that wrote them and the time. Some notes are added automatically, for example when a truck is assigned, renamed or released, or (if the OIC turns it on) when the wind changes.
-- Note photos: photos taken with the camera or chosen from the photo library and attached to a note. Only the photos you choose are uploaded. They are resized on the device before upload.
+- Note photos: photos taken with the camera or chosen from the photo library and attached to a note. Only the photos you choose are uploaded. They are resized on the device before upload. The app reminds you when you attach a photo that photos are deleted 28 days after the incident is closed (section 10).
 - Fire maps: fire outlines, sectors, spot fires, arrows, markers and earlier saved versions of each map.
 - Brigade points saved by OICs, such as water points and tracks.
 - Fire map snapshots: images of a fire map saved to the incident.
@@ -83,7 +84,7 @@ We use personal information only to provide the app's features:
 - to send notifications about messages, assignments and incident activity; and
 - to keep the service secure and working.
 
-We do not use your information for any other purpose, such as marketing, profiling or advertising, unless you agree or the law requires it. We do not sell personal information and we do not share it with data brokers.
+We do not use your information for any other purpose, such as marketing, profiling or advertising, unless you agree or the law requires it. We do not sell personal information and we do not share it with data brokers. We do not track you as Apple defines tracking: we do not link data from FireCom with data from other companies' apps, websites or offline sources for advertising or advertising measurement, and we do not share it with data brokers.
 
 ## 6. Who can see your information
 
@@ -121,7 +122,9 @@ We protect your information with encrypted connections, per user and per team ac
 
 ## 10. How long we keep information
 
-- Accounts, incidents, notes, note photos, fire maps, snapshots and messages: while the OIC's account exists, until deleted.
+- Accounts: until you delete the account in the app (section 11) or ask us to.
+- Incidents, notes, fire maps, snapshots, brigade points and messages: while the OIC's account exists, until the OIC deletes them or the account.
+- Note photos: kept while the incident is open. Once the incident is closed, its note photos are deleted automatically 28 days later. Reopening the incident stops the clock and the 28 days start again from the next close. Open incidents never lose photos. The note text stays in the activity log and shows that the photos were removed. Photos already copied into a PDF report you shared are not affected, as we never hold those reports.
 - Earlier versions of fire maps: removed automatically after 30 days.
 - Truck positions and trails: see section 4 (deleted on unassign, tracking off or close, and never kept longer than 6 hours).
 - Push tokens: replaced or removed when they stop being valid, when you sign out, or when the account is deleted.
@@ -132,16 +135,16 @@ We protect your information with encrypted connections, per user and per team ac
 
 You can delete your account inside the app:
 - OICs: Profile > Delete account. This permanently deletes your account, all incidents you own with their notes and note photos, fire maps, map versions, snapshots, brigade points, messages, truck locations and trails, push tokens and your team, along with the truck device accounts on your team.
-- Truck devices: Profile > Deregister Device. This deletes the device's account, its messages, its location and trail and its push token, and removes it from the team. Notes and photos it added stay part of the OIC's incident record until the OIC deletes them.
+- Truck devices: Profile > Deregister Device. This deletes the device's account, its messages, its location and trail and its push token, and removes it from the team. Notes and photos it added stay part of the OIC's incident record until the OIC deletes them or they expire under section 10.
 
 Deletion cannot be undone. Data stored only on the phone is cleared when the account is deleted, or you can remove the app.
 
 ## 12. Withdrawing consent
 
 You can withdraw consent at any time:
-- Location: the OIC can unassign a truck or turn its tracking off, and anyone can remove FireCom's location permission in the device settings.
-- Camera and photos: only used when you choose to attach a photo. You can remove access in your device settings.
-- Notifications: turn notifications off in your device settings.
+- Location: the OIC can unassign a truck or turn its tracking off. Anyone can remove FireCom's location permission: on iOS, Settings > Privacy & Security > Location Services > FireCom; on Android, Settings > Apps > FireCom > Permissions > Location.
+- Camera and photos: only used when you choose to attach a photo. On iOS, Settings > FireCom > Camera, and Settings > FireCom > Photos; on Android, Settings > Apps > FireCom > Permissions. Photos already attached stay until they are deleted under section 10 or you ask us to delete them.
+- Notifications: on iOS, Settings > Notifications > FireCom; on Android, Settings > Apps > FireCom > Notifications. Signing out also removes your push token.
 - Everything else: delete your account as described in section 11, or contact us.
 
 ## 13. Access, correction and deletion (APP 12 and APP 13)
@@ -158,7 +161,7 @@ If you have a concern about how we handle your personal information, please cont
 
 ## 16. Changes to this policy (APP 1)
 
-We may update this policy when the app changes. The current version is always available at https://mainmaxton.github.io/FireCom-Public/privacy-policy.html and in the app's App Store listing, with a new effective date.
+We may update this policy when the app changes. The current version is always available at https://mainmaxton.github.io/FireCom-Public/privacy-policy.html and in the app's App Store listing, with a new effective date. If a change affects how we use information you have already given us, we will ask for your consent where the law requires it.
 
 ## 17. Contact
 
