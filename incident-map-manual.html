@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FireCom Incident Map Manual</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<p><a href="index.html">&larr; Back</a></p>
+<h1>Incident map manual</h1>
+<p class="muted">FireCom Incident Manager for iOS</p>
+<p>The fire map is a shared satellite map for one incident. Everyone on the OIC's team sees the same drawing. Changes save and sync on their own. If you lose signal, changes wait on the device and upload when you are back online.</p>
+<p>To open it, open the incident and tap <strong>Start fire shape</strong> or <strong>Edit fire shape</strong>, or swipe the incident left and tap <strong>Fire map</strong>. Closed incidents open view only.</p>
+<h2>1. The screen</h2>
+<p><strong>Top bar</strong></p>
+<ul>
+<li><strong>Back</strong>: leave the map.</li>
+<li><strong>History</strong>: saved versions of the map.</li>
+<li><strong>Filter</strong>: choose what shows on the map.</li>
+<li><strong>Export</strong>: PDF report or map image.</li>
+<li><strong>Ruler</strong>: measure distances.</li>
+<li><strong>Settings</strong>: Map settings (appliances and crew edit permissions).</li>
+<li><strong>Clear</strong>: wipe the drawing. Crew see <strong>Locked</strong> unless the OIC allows it. On a view only map this shows <strong>View only</strong>.</li>
+</ul>
+<p><strong>Left side</strong></p>
+<ul>
+<li><strong>Legend</strong>, with the <strong>Trails</strong> and <strong>Weather</strong> switches.</li>
+<li>The weather card, when weather is on.</li>
+<li>The north button. Tap it to turn the map back to north up.</li>
+</ul>
+<p><strong>Bottom panel</strong></p>
+<ul>
+<li>The tool row: <strong>Fire edge</strong>, <strong>Spot fire</strong>, <strong>Points</strong>, <strong>Sector</strong>, <strong>Tracks</strong> (OIC only), <strong>Arrow</strong> and <strong>Select</strong>. Swipe the row to see them all.</li>
+<li>A hint line that tells you the next step.</li>
+<li><strong>Grid</strong>, <strong>Undo</strong>, <strong>Redo</strong>, <strong>Note</strong>, and a save or delete button for the current tool.</li>
+<li>Tap the arrow at the top of the panel to hide it or bring it back.</li>
+</ul>
+<h2>2. Fire edge</h2>
+<p>The fire edge is the main outline of the fire.</p>
+<ol>
+<li>Tap <strong>Fire edge</strong>.</li>
+<li>Tap the map at each corner of the fire.</li>
+<li>When you have at least 3 corners, tap the save button to close the edge.</li>
+</ol>
+<p>To change it later:</p>
+<ol>
+<li>Tap <strong>Edit</strong>.</li>
+<li>Drag corners to new spots. Tap a corner and confirm to remove it.</li>
+<li>Tap <strong>Done</strong> to save, or <strong>Cancel</strong> to put it back as it was.</li>
+</ol>
+<p>The map shows the edge length and burnt area while <strong>Measurements and labels</strong> is on.</p>
+<h2>3. Spot fires</h2>
+<ol>
+<li>Tap <strong>Spot fire</strong>.</li>
+<li>Tap around the spot fire to outline it.</li>
+<li>Tap the first corner again, or tap the save button, to finish. You need at least 3 corners.</li>
+</ol>
+<p>Spot fires are named <em>Spot 1</em>, <em>Spot 2</em> and so on. To resize one, drag its corners while in Spot fire mode. Tap a spot fire to see its area or delete it.</p>
+<h2>4. Points</h2>
+<ol>
+<li>Tap <strong>Points</strong>.</li>
+<li>Pick a type: Water point, Entry point, Hazard, Control Point, Assembly point, Bulk water, Point of origin or Asset at Risk.</li>
+<li>For <strong>Asset at Risk</strong>, also pick what is at risk: House, Building, Power line, Water, Road/Bridge or Other.</li>
+<li>Tap the map to drop the point.</li>
+</ol>
+<p>To edit a point, tap it. Add a short note (up to 120 characters, for example <em>20k L tank, gate code 1234</em>) and tap <strong>Done</strong>, or tap <strong>Remove</strong>. To move a point, hold it and drag.</p>
+<h2>5. Sectors</h2>
+<p>Sectors split the fire edge into named stretches. Draw the fire edge first. Sectors are made from its corners.</p>
+<h3>Smart sectors</h3>
+<p>When part of the edge has no sector yet, FireCom shows a <strong>+</strong> on it.</p>
+<ol>
+<li>Tap <strong>Sector</strong>.</li>
+<li>Tap a <strong>+</strong> to make a sector from that free stretch.</li>
+<li>Name it (for example <em>Sector A</em> or <em>Northern flank</em>). The OIC can also add a <strong>Radio channel</strong>.</li>
+<li>Tap <strong>Save</strong>.</li>
+</ol>
+<h3>Pick your own corners</h3>
+<ol>
+<li>Tap <strong>Sector</strong>.</li>
+<li>Tap the fire edge corner where the sector starts.</li>
+<li>Tap the corner where it ends.</li>
+<li>Two ways round the edge are shown as <strong>A</strong> and <strong>B</strong>. Tap the one this sector covers.</li>
+<li>Name it and tap <strong>Save</strong>.</li>
+</ol>
+<p>New sectors get the next free letter (<em>Sector A</em>, <em>Sector B</em> and so on). A stretch can only belong to one sector.</p>
+<h3>Change a sector</h3>
+<ol>
+<li>In Sector mode, tap the sector's name.</li>
+<li>Choose <strong>Start</strong> or <strong>End</strong> to move that end, <strong>Edit</strong> to rename it or change its radio channel, or <strong>Close</strong>.</li>
+<li>To move an end, tap a ringed corner, then tap the tick to save. If this opens a gap next to another sector, FireCom asks if that sector should move to close it. Choose <strong>No</strong> to leave the gap free.</li>
+<li>To delete the sector, tap the bin at the top right and confirm.</li>
+</ol>
+<h2>6. Arrows</h2>
+<ol>
+<li>Tap <strong>Arrow</strong>.</li>
+<li>Pick <strong>Wind direction</strong> or <strong>Fire direction</strong>.</li>
+<li>Tap where the arrow starts, then where it points.</li>
+</ol>
+<p>Tap an arrow to select it. Then tap <strong>Delete</strong>, or tap Wind or Fire to change its type.</p>
+<h2>7. Tracks (OIC only)</h2>
+<p>Tracks mark roads and firebreaks.</p>
+<ol>
+<li>Tap <strong>Tracks</strong>.</li>
+<li>Tap along the map to draw the track.</li>
+<li>Tap <strong>Save track</strong>. Tap <strong>Done</strong> when finished.</li>
+</ol>
+<p>Tap a track to edit it. Add a short note, tag it <strong>LT Only</strong> or <strong>4WD Only</strong> (or both), then <strong>Save</strong>, or tap <strong>Remove</strong>.</p>
+<h2>8. Select</h2>
+<p>Use Select to move or delete several corners at once.</p>
+<ol>
+<li>Tap <strong>Select</strong>.</li>
+<li>Tap corners to select them.</li>
+<li>Drag one selected corner to move them all, or tap <strong>Delete</strong>.</li>
+</ol>
+<h2>9. Undo, redo, grid and note</h2>
+<ul>
+<li><strong>Undo</strong> and <strong>Redo</strong> step back and forward through your changes.</li>
+<li><strong>Grid</strong> snaps new corners to a grid. Tap again to turn it off. To see the grid itself, turn on <strong>Grid</strong> in <strong>Filter</strong>.</li>
+<li><strong>Note</strong> adds a note about the fire shape, up to 500 characters. Tap <strong>Done</strong> to save.</li>
+</ul>
+<h2>10. Briefing and command channel</h2>
+<p>The briefing and command channel belong to the incident, not the drawing. The OIC edits them in <strong>Incident details</strong> by tapping the pencil. Crew see the command channel as a badge on the incident and in details. Clearing the map does not remove the briefing.</p>
+<h2>11. Legend, layers and weather</h2>
+<h3>Legend</h3>
+<p>The legend lists what is on the map. Tap the up arrow to hide it, and <strong>Legend</strong> to show it again. If anything is hidden by Filter, the legend shows how many.</p>
+<ul>
+<li>Tap <strong>Trails</strong> to show or hide truck trails.</li>
+<li>Tap <strong>Weather</strong> to show or hide the weather card.</li>
+</ul>
+<p>FireCom remembers your Trails and Weather choice next time.</p>
+<h3>Filter</h3>
+<ol>
+<li>Tap <strong>Filter</strong>.</li>
+<li>Turn items on or off: Fire edge, Spot fires, Sectors, each point type, Tracks, Wind arrows, Fire arrows, Crew vehicles, Truck trails, Weather, Measurements and labels, and Grid.</li>
+<li>Tap <strong>Done</strong>.</li>
+</ol>
+<p>Filter only changes what you see and export. Nothing is deleted. Grid starts hidden.</p>
+<h3>Weather card</h3>
+<p>The weather card shows wind direction and speed, gusts, temperature and humidity for the map area. The wind arrow turns orange at 40 km/h or more. If nothing is drawn yet it says <strong>Draw on the map for weather</strong>.</p>
+<p>On an open incident the OIC can turn on <strong>Log changes</strong>. FireCom then adds a note to the activity log when the wind swings 45 degrees or more, or rises to 40 km/h or more.</p>
+<h2>12. Truck markers and trails</h2>
+<ul>
+<li>Each assigned truck shows as a coloured marker. Each truck keeps its own colour. Tap a marker to see its name and when it last updated.</li>
+<li>Each truck has a trail of its path over the last hour, in the truck's colour. Older parts of the trail are fainter.</li>
+<li>If a truck has not sent a position for about a minute, its marker turns grey with an <strong>Appliance offline</strong> badge. Tap it to see when it was last located, for example <em>Last located 7:42pm, 2h ago</em>.</li>
+<li>A truck's last known spot stays on the map for up to 6 hours, then it is removed.</li>
+<li>When the OIC unassigns a truck or turns its tracking off, its marker is removed.</li>
+</ul>
+<p>Truck positions update about every 20 seconds while the map is open.</p>
+<h2 id="appliances">13. Map settings</h2>
+
+<p>Tap <strong>Settings</strong> at the top of the map.</p>
+<h3>Appliances</h3>
+<p>Lists every truck on the team with its status: <strong>Not assigned</strong>, <strong>Assigned to</strong> another incident, <strong>Assigned here</strong>, or <strong>Assigned here, tracking off</strong>.</p>
+<p>The OIC can:</p>
+<ol>
+<li>Tap <strong>Assign here</strong> to put a truck on this incident. If it is on another incident, confirm <strong>Move</strong>.</li>
+<li>Tap <strong>Unassign</strong> to take it off.</li>
+<li>Use the switch to turn tracking on or off for a truck assigned here.</li>
+</ol>
+<p>A truck device shows <em>This phone is</em> and its name. Only the OIC chooses its incident.</p>
+<h3>Crew can edit</h3>
+<p>The OIC can turn crew editing on or off for this map only:</p>
+<ul>
+<li>Fire edge, Spot fires, Points, Sectors, Wind arrows, Fire arrows, Briefing and channel, Activity log notes: on unless you turn them off.</li>
+<li>Clear map: off unless you turn it on.</li>
+</ul>
+<p>Locked tools show a lock and <strong>Locked by OIC</strong> for crew. The server keeps locked items as they are, so crew changes cannot overwrite them. Crew can see these settings but not change them.</p>
+<p>Tap <strong>Done</strong> to close.</p>
+<h2>14. History</h2>
+<p>Each saved version of the map is kept.</p>
+<ol>
+<li>Tap <strong>History</strong>.</li>
+<li>Tap a version to view it. The map shows <strong>Viewing version</strong> and its number.</li>
+<li>The OIC can tap <strong>Restore</strong> to make that version current.</li>
+<li>Tap <strong>Back to current</strong> or <strong>Close</strong> to leave.</li>
+</ol>
+<p>History needs signal.</p>
+<h2>15. Ruler</h2>
+<ol>
+<li>Tap <strong>Ruler</strong>.</li>
+<li>Tap the map to add points. The card shows the total distance and the last leg.</li>
+<li>Use undo to remove the last point, <strong>Clear</strong> to start again, and <strong>Done</strong> to finish.</li>
+</ol>
+<h2>16. Export and map pictures</h2>
+<ol>
+<li>Tap <strong>Export</strong>.</li>
+<li>Choose <strong>PDF report</strong> or <strong>Map image</strong>.</li>
+<li>Wait while the map picture is built, then share it from the share sheet.</li>
+</ol>
+<p>The picture is the satellite map with the drawing on top. Items hidden with Filter are left out, and the PDF says how many were hidden. Each export saves the picture as the incident's map snapshot. A snapshot is also saved when the incident is closed. The PDF from <strong>Incident details</strong> uses the latest snapshot if it is up to date with the drawing.</p>
+<h2>17. Clear the map</h2>
+<ol>
+<li>Tap <strong>Clear</strong>.</li>
+<li>Confirm <strong>Clear</strong>.</li>
+</ol>
+<p>This removes the fire edge, spot fires, points, sectors, arrows and the shape note. The briefing stays. Crew can only do this if the OIC has turned on <strong>Clear map</strong>.</p>
+<h2>More</h2>
+<ul>
+<li><a href="operating-firecom.html">Operating FireCom</a></li>
+<li><a href="privacy-policy.html">Privacy policy</a></li>
+<li><a href="index.html">Support</a></li>
+</ul>
+
+<footer>Last updated 1 November 2026.</footer>
+</body></html>
